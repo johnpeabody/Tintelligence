@@ -4,11 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Related Works</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>Related Works</h1>
-    <div class="link-container">
-        <a href="https://docs.google.com/document/d/1Ooz9xnBfppwXr5YczRBNimdJiPjBy0HaBE0wKKSS2Hc/edit">(UNFINISHED!) Go to Related Works Temporary Doc</a>
+
+    <h2>Research Papers & Tutorials</h2>
+
+    <h3><a href="https://link.springer.com/chapter/10.1007/978-3-319-46487-9_40" target="_blank">Colorful Image Colorization</a></h3>
+    <p>Rather than attempting to find the “correct” colorization, this team of researchers from UC Berkeley tried to make a colorizer that generated “plausible” color schemes. Written in 2016, researchers claim that their colorization method via a feedforward convolutional neural network fooled “32%” of human testers, claiming that was “significantly higher than previous methods,” but it is unclear if “previous methods” included strictly manual methods or only neural-network-driven methods.</p>
+
+    <h3><a href="https://ieeexplore.ieee.org/document/10205871" target="_blank">Black and White Image Colorization Using Convolutional Neural Networks</a></h3>
+    <p>This paper explores black-and-white image colorization using Convolutional Neural Networks (CNNs). They trained it with the MIRFLICKR25k dataset and found that regularization techniques such as dropout and L2 regularization improved performance. Ultimately, based on metrics such as mean squared error and peak signal-to-noise ratio, they deemed their own accuracy results as “moderate” with room to improve—suggesting Autoencoders and GANs as a possible next step.</p>
+
+    <h3><a href="https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Cho_PaletteNet_Image_Recolorization_CVPR_2017_paper.pdf" target="_blank">PaletteNet: Image Recolorization with Given Color Palette</a></h3>
+    <p>PaletteNet is a deep neural network that takes in an image and a specified color palette and then returns the given image recolored in the desired color palette. The neural network is trained to be content-aware in its recolorization with a proposed multi-task loss (Euclidean & Adversarial). The experimental results show that the proposed method outperforms human experts with commercial software (~18 mins vs less than a second).</p>
+
+    <h3><a href="https://pyimagesearch.com/2019/02/25/black-and-white-image-colorization-with-opencv-and-deep-learning/" target="_blank">Black and White Image Colorization Tutorial</a></h3>
+    <p>This tutorial demonstrates how to colorize black and white images using OpenCV and deep learning. The approach is based on Zhang et al.'s 2016 ECCV paper, "Colorful Image Colorization," which employs a CNN trained on the ImageNet dataset. This method enables the automatic colorization of grayscale images that can convincingly resemble natural color photographs.</p>
+
+    <h3><a href="https://www.mdpi.com/2227-7390/8/12/2258" target="_blank">Auto-Colorization of Historical Images Using Deep Convolutional Neural Networks</a></h3>
+    <p>This research addresses the problem of generating a plausible colored photograph of ancient, historically black-and-white images using deep learning techniques. They propose a network model that integrates deep CNN with Inception ResNetV2, aiming to colorize images with no human intervention. The subjective validation of the generated images was assessed by means of a user study.</p>
+
+    <div>
+        <a href="index.html">Back to Project Proposal</a>
     </div>
 </body>
 </html>
