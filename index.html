@@ -51,6 +51,8 @@
     <h2 id="introduction">Introduction</h2>
         <p>Deprived of the vivid colors that now paint modern pictures, black and white footage during the era of pre-colorized film can easily seem detached from reality. Take documentary footage of World War II for example. Only when colorized with the same shades that one would see in their everyday life--often only possible thanks to an expensive, commercial restoration effort like History Channel’s “World War II in Colour”--can these pictures evoke the “realness” of the moments they depict. And yet, with significant advancements having been made in the field of AI-driven image colorization, the powerful visual data processing capabilities of convolutional neural networks offers a chance to expedite this process and bring further historical footage to life. The benefits don’t stop here, however. Colorization has the potential to enhance the effectiveness of medical imaging or create more accessible content for those with colorblindness.
 
+Such a process does not come without challenges, however. 
+
 Using a convolutional neural network trained on a large dataset of consecutive colored images and their grayscale counterparts, we will be able to implement an automatic black-and-white colorizer of plausible color schemes. 
 </p>
     
@@ -59,7 +61,7 @@ Using a convolutional neural network trained on a large dataset of consecutive c
         <p>Building on black & white colorization, there have also been suggestions of colorization that deviate from realistic/natural colors and apply artistic/aesthetic colorization to images. For Zhang et al. in “Colorful Image Colorization”, rather than attempting to find the “correct” colorization, this team of researchers tried to make a colorizer that generated “plausible” color schemes. As for cho et al. who worked on PaletteNet, they had a deep neural network that took in an image and a specified color palette and then returned the given image newly colorized in the desired color palette. These cases show that image colorization can go beyond realistic replication to include artistic projects and aesthetic preferences.</p>
     
     <h2 id="methods">Methods</h2>
-    <p>#TO DO:</p>
+    <p>In regards to software, we intend to convert a Jupyter Notebook using PyTorch into a standalone app using Voila. While Gradio is a sound alternative--and one we considered using--we think that Voila will be most effective towards achieving a tangible end result. As for datasets, we anticipate that an ImageNet dataset with color images turned into grayscale will be adequate (as suggested by previous research). Although an analysis that hones in on creating realistic grayscale images and testing the believability of this is a meaningful route, that would require test participants; instead, we will merely analyze the error between the colorized image and the original, non-grayscale image. However, in the unlikely event that the ImageNet dataset is inadequate--or we wanted to improve the “randomness” of the validation dataset--we anticipate that we can collect and grayscale a large number of images from the internet. For our model, we’re opting to use a pre-trained convolutional neural network from PyTorch’s library as a feature extractor in order to save time and energy, but then later training the custom layers ourselves. </p>
     
     <h2 id="results">Results</h2>
     <p>#TO DO:</p>
