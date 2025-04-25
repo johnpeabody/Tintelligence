@@ -78,9 +78,9 @@ Using a convolutional neural network trained on a large dataset of consecutive c
     <p>#TO DO:</p>
     
     <h2 id="discussion">Discussion</h2>
-    <p>What is left to be done? Currently, we are in the process of designing our CNN for maximal realism and tweaking features as we continue experimenting to build our unique model. 
+    <p> Given that these grayscale images will have an original color-photo counterpart, it is important to not only produce a colorized image from the grayscale image but also to compare the colorized image to the original color one. With this in mind, we anticipate using Mean Absolute Error between the colorized pixels and the corresponding pixel in the original image. Naturally, a lower Mean Absolute Error would suggest that the neural network was effective in accomplishing its task, but a non-low Mean Absolute Error does not necessarily suggest it was ineffective. If the Neural Network produces images that are plausible to the eye but vary significantly in actual RGB value to the original, it has at least become an effective plausible colorizer--as opposed to a “replicator.” To elaborate further, consider a picture of a blue billiards table with five red balls on it; some are dull, some are sharp. Due to the rules of the game, billiards tables would likely have a variety of colors on the table--is it unreasonable for the Neural Network to colorize each ball differently, especially given that there is variation between them? As the UC Berkeley study cited in this paper suggests, this is not a failure of the Neural Network, merely an attribute. 
 
-Future work could extend to designing a CNN that converts greyscale film into color, which would unlock a whole new domain of vintage videos and films. 
+
 </p>
     
     <h2 id="conclusion">Conclusion</h2>
