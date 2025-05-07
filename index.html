@@ -55,12 +55,6 @@ Such a process does not come without challenges, however.
 
 Using a convolutional neural network trained on a large dataset of consecutive colored images and their grayscale counterparts, we will be able to implement an automatic black-and-white colorizer of plausible color schemes. 
 </p>
-    <h2 id="Reflection">Reflection</h2>
-        <p>Our project uses methods from different sources combined to try and find the optimal result. Not done with this section...</p>
-
-    <h2 id="How does our work differ?">How does our work differ?</h2>
-        <p>As we are still puting this project together, we have come across obstacles related to integration of systems from the related works as well as version control. </p>
-    
     <h2 id="related-works">Related Works / Literature Review</h2>
         <p>Within the field of black & white colorization, there has been a great number of progress and variations in terms of projects. While all of them use convolutional neural networks, there are variations in the training models used. For Revathi et al. <a href="#R4">(4)</a> in “Black and White Image Colorization Using Convolutional Neural Networks” they trained their network with the MIRFLICKR 25k dataset. This proposed method produced great results with a very little mean square error of 0.3174. As for Joshi et al. <a href="#R3">(3)</a> in “Auto-Colorization of Historical Images Using Deep Convolutional Neural Networks” they integrate deep CNN with Inception ResNetV2 and train their model on a dataset they created with 1.2 K historical images comprised of old and ancient photographs of Nepal. There is also a tutorial on “Pyimagesearch” by Rosebrock <a href="#R5">(5)</a> that suggests using deep CNN alongside OpenCV with training on the ImageNet dataset. This method enables the automatic colorization of grayscale images that can convincingly resemble natural color photographs just like the previously mentioned works.</p>
         <p>Building on black & white colorization, there have also been suggestions of colorization that deviate from realistic/natural colors and apply artistic/aesthetic colorization to images. For Zhang et al. <a href="#R1">(1)</a> in “Colorful Image Colorization”, rather than attempting to find the “correct” colorization, this team of researchers tried to make a colorizer that generated “plausible” color schemes. As for Cho et al. <a href="#R2">(2)</a> who worked on PaletteNet, they had a deep neural network that took in an image and a specified color palette and then returned the given image newly colorized in the desired color palette. These cases show that image colorization can go beyond realistic replication to include artistic projects and aesthetic preferences.</p>
@@ -82,6 +76,19 @@ Using a convolutional neural network trained on a large dataset of consecutive c
     
     <h2 id="conclusion">Conclusion</h2>
     <p>#TO DO:</p>
+
+    <h2 id="Reflection">Reflection</h2>
+        <p>As we wrapped up this project, we realized that a main limitation in the quality of our results stemmed from predicting RGB values instead of Lab values. The Lab color space is designed to be more perceptually uniform, which means it better aligns with how humans perceive color differences—making it more effective for tasks like colorization. That said, I’m still glad we started with RGB. It was the most intuitive first step, and it allowed us to explore the problem in a way that made sense to us as we learned how to implement and train CNNs.</p>
+
+        <p>The problem with the RGB approach was that the model seemed to make everything the most average color of brown to reduce loss, and it wouldn’t take enough risk to put color into images. As a result, the loss was going down, but the results were hardly improving.</p>
+        
+        <p>I’m proud of how many different model variations we tested throughout the process. However, I do wish we had a stronger grasp of how to structure and manage datasets. We ended up with two entirely separate codebases, each with its own issues, because that was the only way we figured out how to test different data. In hindsight, it would have been far better to develop a more flexible pipeline that could switch between datasets more easily.</p>
+        
+        <p>If we had gotten the RGB-based CNNs working earlier, we might have realized sooner how difficult it would be to achieve high-quality results. That could have given us time to pivot to the Lab approach, which seems to perform better. Comparing the two approaches—on similar datasets and with models of similar complexity—would have been a compelling experiment.</p>
+        
+        <p>In the end, one of the biggest lessons we learned is the importance of slowing down and engaging deeply with the existing literature before jumping into a project. Taking the time to learn from others and then laying out a clear, shared approach is crucial. Finally, I’m walking away with a deeper understanding that collaboration and coordination are far more effective in the long run than just working asynchronously in isolation to get things done.</p>
+
+        <p>As we are still puting this project together, we have come across obstacles related to integration of systems from the related works as well as version control. </p>
 
     <div class="link-container">
         <a href="related_works.html">Go to Related Works</a>
